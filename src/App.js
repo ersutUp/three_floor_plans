@@ -47,6 +47,13 @@ const AsyncDjFloorFour = Loadable({
 	loader: () => import('./pages/dj/FloorFour/FloorFour'),
 	loading: Loading
 });
+
+//2教
+const AsyncPublic22F = Loadable({
+	loader: () => import('./pages/public2/2F/2F'),
+	loading: Loading
+});
+
 class App extends Component {
 	componentDidCatch(error, errorInfo) {
 		console.log(error, errorInfo, 'react-err-eric');
@@ -76,6 +83,9 @@ class App extends Component {
 										<Route path="/dj/floor-two" component={AsyncDjFloorTwo} />
 										<Route path="/dj/floor-three" component={AsyncDjFloorThree} />
 										<Route path="/dj/floor-four" component={AsyncDjFloorFour} />
+                    {/* 2教 */}
+										<Route path="/public2/2F" component={AsyncPublic22F} />
+                    
 										<Redirect to="/dj/floor-two"/>
 									</Switch>
 								{/*</CSSTransition>*/}
