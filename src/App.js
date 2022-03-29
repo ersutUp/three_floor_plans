@@ -34,9 +34,17 @@ const AsyncFloorThree = Loadable({
 	loader: () => import('./pages/FloorThree/FloorThree'),
 	loading: Loading
 });
-
+//电教楼
 const AsyncDjFloorTwo = Loadable({
 	loader: () => import('./pages/dj/FloorTwo/FloorTwo'),
+	loading: Loading
+});
+const AsyncDjFloorThree = Loadable({
+	loader: () => import('./pages/dj/FloorThree/FloorThree'),
+	loading: Loading
+});
+const AsyncDjFloorFour = Loadable({
+	loader: () => import('./pages/dj/FloorFour/FloorFour'),
 	loading: Loading
 });
 class App extends Component {
@@ -66,6 +74,8 @@ class App extends Component {
 										<Route path="/floor-one/:position" component={AsyncFloorOne} />
 										<Route path="/floor-two/:position" component={AsyncFloorTwo} />
 										<Route path="/dj/floor-two" component={AsyncDjFloorTwo} />
+										<Route path="/dj/floor-three" component={AsyncDjFloorThree} />
+										<Route path="/dj/floor-four" component={AsyncDjFloorFour} />
 										<Redirect to="/dj/floor-two"/>
 									</Switch>
 								{/*</CSSTransition>*/}

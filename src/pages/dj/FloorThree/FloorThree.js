@@ -19,7 +19,7 @@ import {
   PerspectiveCamera
 } from "three";
 import { Interaction } from 'three.interaction';
-import './FloorTwo.less';
+import './FloorThree.less';
 // import OrbitControls from 'three-orbitcontrols';
 // import Stats from '../../utils/stats.module.js';
 
@@ -37,12 +37,13 @@ const in_class_room_color = "0x05295e"
 
 //0是下课 1是上课
 let roomStatus = {
-  "201":0,
-  "202":0,
-  "203":0,
-  "204":0,
-  "206":0,
-  "207":0,
+  "301":0,
+  "302":0,
+  "303":0,
+  "304":0,
+  "306":0,
+  "307":0,
+  "308":0,
   "208":0,
 };
 let that;
@@ -152,62 +153,62 @@ class FloorTwo extends Component {
   };
   initGeometryBox = () => {
     let { scene } = this;
-    //201
-    let box201 = getGeometryBox(
+    //301
+    let box301 = getGeometryBox(
       212,
       wall_height,
       156,
-      roomStatus[201] === 0 ?free_room_color:in_class_room_color,
+      roomStatus[301] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
-      '201',
+      '301',
       '',
       '',
       "#fff"
     );
-    box201.position.set(325, 0, -250);
-    //202
-    let box202 = getGeometryBox(
+    box301.position.set(325, 0, -250);
+    //302
+    let box302 = getGeometryBox(
       212,
       wall_height,
       156,
-      roomStatus[202] === 0 ?free_room_color:in_class_room_color,
+      roomStatus[302] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
-      '202',
+      '302',
       '',
       '',
       "#fff"
     );
-    box202.position.set(110, 0, -250);
-    //203
-    let box203 = getGeometryBox(
+    box302.position.set(110, 0, -250);
+    //303
+    let box303 = getGeometryBox(
       212,
       wall_height,
       156,
-      roomStatus[203] === 0 ?free_room_color:in_class_room_color,
+      roomStatus[303] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
-      '203',
+      '303',
       '',
       '',
       "#fff"
     );
-    box203.position.set(-105, 0, -250);
-    //204
-    let box204 = getGeometryBox(
+    box303.position.set(-105, 0, -250);
+    //304
+    let box304 = getGeometryBox(
       212,
       wall_height,
       156,
-      roomStatus[204] === 0 ?free_room_color:in_class_room_color,
+      roomStatus[304] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
-      '204',
+      '304',
       '',
       '',
       "#fff"
     );
-    box204.position.set(-320, 0, -250);
+    box304.position.set(-320, 0, -250);
 
     
     //楼梯
-    let stairs_204_1 = getGeometryBox(
+    let stairs_304_1 = getGeometryBox(
       120,
       wall_height,
       65,
@@ -218,10 +219,10 @@ class FloorTwo extends Component {
       '',
       "#fff"
     );
-    stairs_204_1.position.set(-411, 0, -105);
+    stairs_304_1.position.set(-411, 0, -105);
 
     //楼梯
-    let stairs_206_1 = getGeometryBox(
+    let stairs_306_1 = getGeometryBox(
       120,
       wall_height,
       65,
@@ -232,7 +233,7 @@ class FloorTwo extends Component {
       '',
       "#fff"
     );
-    stairs_206_1.position.set(-411, 0, 25);
+    stairs_306_1.position.set(-411, 0, 25);
     
     //休息室
     let lounge = getGeometryBox(
@@ -288,61 +289,22 @@ class FloorTwo extends Component {
     );
     neiting2.position.set(-65, 0, 55);
 
-    //门厅上空
-    let vestibule1 = getGeometryBox(
+    //308
+    let box308 = getGeometryBox(
       135,
       wall_height,
-      5,
-      '0x4180c4',
+      195,
+      roomStatus[308] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
+      '308',
       '',
       '',
-      '',
-      ""
+      "#fff"
     );
-    vestibule1.position.set(363, 0, -134);
-    
-    let vestibule2 = getGeometryBox(
-      5,
-      wall_height,
-      193,
-      '0x4180c4',
-      'meshA1',
-      '',
-      '',
-      '',
-      ""
-    );
-    vestibule2.position.set(296, 0, -40);
-
-    let vestibule3 = getGeometryBox(
-      135,
-      wall_height,
-      5,
-      '0x4180c4',
-      'meshA1',
-      '',
-      '',
-      '',
-      ""
-    );
-    vestibule3.position.set(363, 0, 55);
-
-    let vestibule4 = getGeometryBox(
-      5,
-      wall_height,
-      194,
-      '0x4180c4',
-      'meshA1',
-      '',
-      '',
-      '',
-      ""
-    );
-    vestibule4.position.set(431, 0, -40);
+    box308.position.set(363, 0, -40);
 
     //楼梯
-    let stairs_202_1 = getGeometryBox(
+    let stairs_302_1 = getGeometryBox(
       120,
       wall_height,
       65,
@@ -353,7 +315,7 @@ class FloorTwo extends Component {
       '',
       "#fff"
     );
-    stairs_202_1.position.set(150, 0, -105);
+    stairs_302_1.position.set(150, 0, -105);
 
     //楼梯
     let stairs_208_3 = getGeometryBox(
@@ -384,32 +346,32 @@ class FloorTwo extends Component {
     elevator.position.set(150, 0, -40);
     
 
-    //206
-    let box206 = getGeometryBox(
+    //306
+    let box306 = getGeometryBox(
       212,
       wall_height,
       156,
-      roomStatus[206] === 0 ?free_room_color:in_class_room_color,
+      roomStatus[306] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
-      '206',
+      '306',
       '',
       '',
       "#fff"
     );
-    box206.position.set(-320, 0, 170);
-    //207
-    let box207 = getGeometryBox(
+    box306.position.set(-320, 0, 170);
+    //307
+    let box307 = getGeometryBox(
       212,
       wall_height,
       156,
-      roomStatus[207] === 0 ?free_room_color:in_class_room_color,
+      roomStatus[307] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
-      '207',
+      '307',
       '',
       '',
       "#fff"
     );
-    box207.position.set(-105, 0, 170);
+    box307.position.set(-105, 0, 170);
     //208
     let box208 = getGeometryBox(
       342,
@@ -437,6 +399,33 @@ class FloorTwo extends Component {
       "#fff"
     );
     box_storeroom.position.set(393, 0, 212);
+
+    //空调机房
+    let air_conditioning = getGeometryBox(
+      87,
+      wall_height,
+      50,
+      '0xb4b4b4',
+      'meshA1',
+      '空调机房',
+      '',
+      '',
+      "#fff"
+    );
+    air_conditioning.position.set(393, 0, 161);
+    //控制室
+    let control_room = getGeometryBox(
+      87,
+      wall_height,
+      98,
+      '0xb4b4b4',
+      'meshA1',
+      '控制室',
+      '',
+      '',
+      "#fff"
+    );
+    control_room.position.set(393, 0, 238);
 
     //楼梯
     let stairs_208_1 = getGeometryBox(
@@ -466,8 +455,8 @@ class FloorTwo extends Component {
     );
     stairs_208_2.position.set(393, 0, 310);
 
-    //楼梯207
-    let stairs_207_1 = getGeometryBox(
+    //楼梯307
+    let stairs_307_1 = getGeometryBox(
       87,
       wall_height,
       110,
@@ -478,7 +467,7 @@ class FloorTwo extends Component {
       '',
       "#fff"
     );
-    stairs_207_1.position.set(-42, 0, 306);
+    stairs_307_1.position.set(-42, 0, 306);
 
     //楼梯右下
     let stairs_right_down = getGeometryBox(
@@ -497,7 +486,7 @@ class FloorTwo extends Component {
 
     let group = new Group();
     // group.add(box204, boxA4, boxA5, boxA6, boxA7, boxA8, boxA9, groupL, boxA13, boxA14, liftGroup);
-    group.add(box201,box202,box203,box204,stairs_204_1,stairs_206_1,lounge,toilet,neiting1,neiting2,stairs_202_1,stairs_208_3,elevator,vestibule1,vestibule2,vestibule3,vestibule4,box206,box207,box208,box_storeroom,stairs_208_1,stairs_208_2,stairs_207_1,stairs_right_down);
+    group.add(box301,box302,box303,box304,stairs_304_1,stairs_306_1,lounge,toilet,neiting1,neiting2,stairs_302_1,stairs_208_3,elevator,box308,box306,box307,box208,control_room,air_conditioning,stairs_208_1,stairs_208_2,stairs_307_1,stairs_right_down);
     // group.rotation.set(0, -Math.PI / 180 * 45, 0);
     group.rotation.set(0, 0, 0);
     group.position.set(0, 0, 0);
@@ -580,7 +569,7 @@ class FloorTwo extends Component {
     let { scene, camera, renderer } = this;
 
     return (
-      <div className={'floor-two'}>
+      <div className={'floor-three'}>
           <div
             className="canvas"
             style={{ textAlign: 'center' }}
