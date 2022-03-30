@@ -181,7 +181,7 @@ class FloorTwo extends Component {
     box220.position.set(-265, 0, -300);
 
 
-    //内庭上空
+    //走廊
     let wall1 = getGeometryBox(
       5,
       wall_height,
@@ -218,37 +218,215 @@ class FloorTwo extends Component {
       ""
     );
     wall3.position.set(-290, 0, -195);
-
-
-
-
-    //201
-    let box201 = getGeometryBox(
-      212,
+    let wall4 = getGeometryBox(
+      5,
       wall_height,
-      156,
-      roomStatus[201] === 0 ?free_room_color:in_class_room_color,
+      165,
+      '0x4180c4',
       'meshA1',
-      '201',
+      '',
+      '',
+      '',
+      ""
+    );
+    wall4.position.set(-258, 0, -115);
+    let wall5 = getGeometryBox(
+      5,
+      wall_height,
+      55,
+      '0x4180c4',
+      'meshA1',
+      '',
+      '',
+      '',
+      ""
+    );
+    wall5.position.set(-200, 0, -60);
+    let wall6 = getGeometryBox(
+      5,
+      wall_height,
+      55,
+      '0x4180c4',
+      'meshA1',
+      '',
+      '',
+      '',
+      ""
+    );
+    wall6.position.set(-200, 0, -170);
+    //楼梯
+    let stairs_218 = getGeometryBox(
+      110,
+      wall_height,
+      55,
+      '0xb4b4b4',
+      'meshA1',
+      '楼梯',
       '',
       '',
       "#fff"
     );
-    box201.position.set(325, 0, -250);
+    stairs_218.position.set(-147, 0, -115);
+    
+    //休息室
+    let lounge = getGeometryBox(
+      65,
+      wall_height,
+      105,
+      '0xb4b4b4',
+      'meshA1',
+      '休息室',
+      '',
+      '',
+      "#fff"
+    );
+    lounge.position.set(-288, 0, 20);
+    let wall7 = getGeometryBox(
+      120,
+      wall_height,
+      5,
+      '0x4180c4',
+      'meshA1',
+      '',
+      '',
+      '',
+      ""
+    );
+    wall7.position.set(-142, 0, -33);
+    //206
+    let box206 = getGeometryBox(
+      119,
+      wall_height,
+      105,
+      roomStatus[201] === 0 ?free_room_color:in_class_room_color,
+      'meshA1',
+      '206',
+      '',
+      '',
+      "#fff"
+    );
+    box206.position.set(-22, 0, 17);
+    //204
+    let box204 = getGeometryBox(
+      119,
+      wall_height,
+      105,
+      roomStatus[201] === 0 ?free_room_color:in_class_room_color,
+      'meshA1',
+      '204',
+      '',
+      '',
+      "#fff"
+    );
+    box204.position.set(100, 0, 17);
     //202
     let box202 = getGeometryBox(
-      212,
+      119,
       wall_height,
-      156,
-      roomStatus[202] === 0 ?free_room_color:in_class_room_color,
+      105,
+      roomStatus[201] === 0 ?free_room_color:in_class_room_color,
       'meshA1',
       '202',
       '',
       '',
       "#fff"
     );
-    box202.position.set(110, 0, -250);
+    box202.position.set(222, 0, 17);
     
+    //厕所
+    let toilet = getGeometryBox(
+      75,
+      wall_height,
+      122,
+      '0xb4b4b4',
+      'meshA1',
+      '厕所',
+      '',
+      '',
+      "#fff"
+    );
+    toilet.position.set(-283, 0, 161);
+    //楼梯
+    let stairs = getGeometryBox(
+      55,
+      wall_height,
+      122,
+      '0xb4b4b4',
+      'meshA1',
+      '楼梯',
+      '',
+      '',
+      "#fff"
+    );
+    stairs.position.set(-192, 0, 161);
+    //中庭上空
+    let neiting1 = getGeometryBox(
+      255,
+      wall_height,
+      5,
+      '0x4180c4',
+      'meshA1',
+      '',
+      '',
+      '',
+      ""
+    );
+    neiting1.position.set(-37, 0, 102);
+    let neiting2 = getGeometryBox(
+      255,
+      wall_height,
+      5,
+      '0x4180c4',
+      'meshA1',
+      '',
+      '',
+      '',
+      ""
+    );
+    neiting2.position.set(-37, 0, 220);
+    //电梯
+    let elevator = getGeometryBox(
+      35,
+      wall_height,
+      75,
+      '0xb4b4b4',
+      'meshA1',
+      '电梯',
+      '',
+      '',
+      "#fff"
+    );
+    elevator.position.set(72, 0, 160);
+    //水暖井
+    let plumbing_well = getGeometryBox(
+      42,
+      wall_height,
+      25,
+      '0xb4b4b4',
+      'meshA1',
+      '',
+      '',
+      '',
+      "#fff"
+    );
+    plumbing_well.position.set(111, 0, 210);
+    //水暖井
+    let electric_well = getGeometryBox(
+      42,
+      wall_height,
+      24,
+      '0xb4b4b4',
+      'meshA1',
+      '',
+      '',
+      '',
+      "#fff"
+    );
+    electric_well.position.set(111, 0, 111);
+
+
+
+
     //楼梯
     let stairs_204_1 = getGeometryBox(
       120,
@@ -262,74 +440,6 @@ class FloorTwo extends Component {
       "#fff"
     );
     stairs_204_1.position.set(-411, 0, -105);
-
-    //楼梯
-    let stairs_206_1 = getGeometryBox(
-      120,
-      wall_height,
-      65,
-      '0xb4b4b4',
-      'meshA1',
-      '楼梯',
-      '',
-      '',
-      "#fff"
-    );
-    stairs_206_1.position.set(-411, 0, 25);
-    
-    //休息室
-    let lounge = getGeometryBox(
-      120,
-      wall_height,
-      60,
-      '0xb4b4b4',
-      'meshA1',
-      '休息室',
-      '',
-      '',
-      "#fff"
-    );
-    lounge.position.set(-411, 0, -40);
-    
-    //厕所
-    let toilet = getGeometryBox(
-      95,
-      wall_height,
-      195,
-      '0xb4b4b4',
-      'meshA1',
-      '厕所',
-      '',
-      '',
-      "#fff"
-    );
-    toilet.position.set(-268, 0, -40);
-
-    //内庭上空
-    let neiting1 = getGeometryBox(
-      310,
-      wall_height,
-      5,
-      '0x4180c4',
-      'meshA1',
-      '',
-      '',
-      '',
-      ""
-    );
-    neiting1.position.set(-65, 0, -134);
-    let neiting2 = getGeometryBox(
-      310,
-      wall_height,
-      5,
-      '0x4180c4',
-      'meshA1',
-      '',
-      '',
-      '',
-      ""
-    );
-    neiting2.position.set(-65, 0, 55);
 
     //门厅上空
     let vestibule1 = getGeometryBox(
@@ -384,51 +494,8 @@ class FloorTwo extends Component {
     );
     vestibule4.position.set(431, 0, -40);
 
-    //楼梯
-    let stairs_202_1 = getGeometryBox(
-      120,
-      wall_height,
-      65,
-      '0xb4b4b4',
-      'meshA1',
-      '楼梯',
-      '',
-      '',
-      "#fff"
-    );
-    stairs_202_1.position.set(150, 0, -105);
-
-    //楼梯
-    let stairs_208_3 = getGeometryBox(
-      120,
-      wall_height,
-      65,
-      '0xb4b4b4',
-      'meshA1',
-      '楼梯',
-      '',
-      '',
-      "#fff"
-    );
-    stairs_208_3.position.set(150, 0, 25);
-    
-    //电梯
-    let elevator = getGeometryBox(
-      50,
-      wall_height,
-      60,
-      '0xb4b4b4',
-      'meshA1',
-      '电梯',
-      '',
-      '',
-      "#fff"
-    );
-    elevator.position.set(150, 0, -40);
-    
-
     //206
-    let box206 = getGeometryBox(
+    let box2061 = getGeometryBox(
       212,
       wall_height,
       156,
@@ -439,7 +506,7 @@ class FloorTwo extends Component {
       '',
       "#fff"
     );
-    box206.position.set(-320, 0, 170);
+    box2061.position.set(-320, 0, 170);
     //207
     let box207 = getGeometryBox(
       212,
@@ -481,48 +548,6 @@ class FloorTwo extends Component {
     );
     box_storeroom.position.set(393, 0, 212);
 
-    //楼梯
-    let stairs_208_1 = getGeometryBox(
-      87,
-      wall_height,
-      41,
-      '0xb4b4b4',
-      'meshA1',
-      '楼梯',
-      '',
-      '',
-      "#fff"
-    );
-    stairs_208_1.position.set(393, 0, 113);
-
-    //楼梯
-    let stairs_208_2 = getGeometryBox(
-      87,
-      wall_height,
-      41,
-      '0xb4b4b4',
-      'meshA1',
-      '楼梯',
-      '',
-      '',
-      "#fff"
-    );
-    stairs_208_2.position.set(393, 0, 310);
-
-    //楼梯207
-    let stairs_207_1 = getGeometryBox(
-      87,
-      wall_height,
-      110,
-      '0xb4b4b4',
-      'meshA1',
-      '楼梯',
-      '',
-      '',
-      "#fff"
-    );
-    stairs_207_1.position.set(-42, 0, 306);
-
     //楼梯右下
     let stairs_right_down = getGeometryBox(
       87,
@@ -540,8 +565,8 @@ class FloorTwo extends Component {
 
     let group = new Group();
     // group.add(box204, boxA4, boxA5, boxA6, boxA7, boxA8, boxA9, groupL, boxA13, boxA14, liftGroup);
-    group.add(box218,box220,wall1,wall2,wall3,
-      box201,box202,stairs_204_1,stairs_206_1,lounge,toilet,neiting1,neiting2,stairs_202_1,stairs_208_3,elevator,vestibule1,vestibule2,vestibule3,vestibule4,box206,box207,box208,box_storeroom,stairs_208_1,stairs_208_2,stairs_207_1,stairs_right_down);
+    group.add(box218,box220,wall1,wall2,wall3,wall4,wall5,wall6,stairs_218,wall7,stairs,box206,box204,box202,plumbing_well,electric_well
+      ,stairs_204_1,lounge,toilet,neiting1,neiting2,elevator,vestibule1,vestibule2,vestibule3,vestibule4,box_storeroom,stairs_right_down);
     // group.rotation.set(0, -Math.PI / 180 * 45, 0);
     group.rotation.set(0, 0, 0);
     group.position.set(0, 0, 0);
