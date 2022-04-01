@@ -53,6 +53,34 @@ const AsyncPublic22F = Loadable({
 	loader: () => import('./pages/public2/2F/2F'),
 	loading: Loading
 });
+const AsyncPublic23F = Loadable({
+	loader: () => import('./pages/public2/3F/3F'),
+	loading: Loading
+});
+const AsyncPublic24F = Loadable({
+	loader: () => import('./pages/public2/4F/4F'),
+	loading: Loading
+});
+const AsyncPublic25F = Loadable({
+	loader: () => import('./pages/public2/5F/5F'),
+	loading: Loading
+});
+const AsyncPublic26F = Loadable({
+	loader: () => import('./pages/public2/6F/6F'),
+	loading: Loading
+});
+const AsyncPublic27F = Loadable({
+	loader: () => import('./pages/public2/7F/7F'),
+	loading: Loading
+});
+const AsyncPublic28F = Loadable({
+	loader: () => import('./pages/public2/8F/8F'),
+	loading: Loading
+});
+const AsyncPublic29F = Loadable({
+	loader: () => import('./pages/public2/9F/9F'),
+	loading: Loading
+});
 
 class App extends Component {
 	componentDidCatch(error, errorInfo) {
@@ -85,6 +113,13 @@ class App extends Component {
 										<Route path="/dj/floor-four" component={AsyncDjFloorFour} />
                     {/* 2教 */}
 										<Route path="/public2/2F" component={AsyncPublic22F} />
+										<Route path="/public2/3F" component={AsyncPublic23F} />
+										<Route path="/public2/4F" component={AsyncPublic24F} />
+										<Route path="/public2/5F" component={AsyncPublic25F} />
+										<Route path="/public2/6F" component={AsyncPublic26F} />
+										<Route path="/public2/7F" component={AsyncPublic27F} />
+										<Route path="/public2/8F" component={AsyncPublic28F} />
+										<Route path="/public2/9F" component={AsyncPublic29F} />
                     
 										<Redirect to="/dj/floor-two"/>
 									</Switch>
