@@ -95,6 +95,26 @@ const AsyncPublic14F = Loadable({
 	loader: () => import('./pages/public1/4F/4F'),
 	loading: Loading
 });
+const AsyncPublic15F = Loadable({
+	loader: () => import('./pages/public1/5F/5F'),
+	loading: Loading
+});
+const AsyncPublic16F = Loadable({
+	loader: () => import('./pages/public1/6F/6F'),
+	loading: Loading
+});
+const AsyncPublic17F = Loadable({
+	loader: () => import('./pages/public1/7F/7F'),
+	loading: Loading
+});
+const AsyncPublic18F = Loadable({
+	loader: () => import('./pages/public1/8F/8F'),
+	loading: Loading
+});
+const AsyncPublic19F = Loadable({
+	loader: () => import('./pages/public1/9F/9F'),
+	loading: Loading
+});
 class App extends Component {
 	componentDidCatch(error, errorInfo) {
 		console.log(error, errorInfo, 'react-err-eric');
@@ -137,6 +157,11 @@ class App extends Component {
 										<Route path="/public1/2F" component={AsyncPublic12F} />
 										<Route path="/public1/3F" component={AsyncPublic13F} />
 										<Route path="/public1/4F" component={AsyncPublic14F} />
+										<Route path="/public1/5F" component={AsyncPublic15F} />
+										<Route path="/public1/6F" component={AsyncPublic16F} />
+										<Route path="/public1/7F" component={AsyncPublic17F} />
+										<Route path="/public1/8F" component={AsyncPublic18F} />
+										<Route path="/public1/9F" component={AsyncPublic19F} />
                     
 										<Redirect to="/dj/floor-two"/>
 									</Switch>
